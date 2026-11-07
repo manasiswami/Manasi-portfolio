@@ -1,0 +1,282 @@
+
+/* ============================
+   EXPERIENCE SECTION
+============================ */
+
+.experience-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Experience Card */
+
+.experience-card {
+  position: relative;
+  overflow: hidden;
+  padding: 35px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+
+  box-shadow: 0 8px 28px var(--shadow);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Top gradient line */
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient);
+}
+
+/* Card Hover */
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 12px 32px var(--shadow);
+}
+
+/* ============================
+   EXPERIENCE HEADER
+============================ */
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.experience-header h3 {
+  margin-bottom: 8px;
+  color: var(--heading);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.experience-header h4 {
+  color: var(--primary);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Internship Badge */
+
+.experience-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 14px;
+
+  background: var(--hover);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Experience Duration */
+
+.experience-date {
+  flex-shrink: 0;
+  padding: 9px 15px;
+
+  background: var(--hover);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ============================
+   DESCRIPTION
+============================ */
+
+.experience-description {
+  margin: 22px 0;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ============================
+   RESPONSIBILITIES
+============================ */
+
+.responsibility-title {
+  position: relative;
+  margin-bottom: 15px;
+
+  color: var(--heading);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.experience-list {
+  padding-left: 22px;
+  margin-bottom: 25px;
+}
+
+.experience-list li {
+  padding-left: 5px;
+  margin-bottom: 12px;
+
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.experience-list li::marker {
+  color: var(--primary);
+}
+
+/* ============================
+   TECHNOLOGY BADGES
+============================ */
+
+.experience-card .tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.experience-card .tech-stack span {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 14px;
+
+  background: var(--hover);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.experience-card .tech-stack span:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--btn-text);
+}
+
+/* ============================
+   TABLET RESPONSIVE
+============================ */
+
+@media (max-width: 768px) {
+
+  .experience-card {
+    padding: 28px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .experience-header h3 {
+    font-size: 21px;
+  }
+
+  .experience-date {
+    white-space: normal;
+  }
+
+  .experience-description {
+    font-size: 14px;
+  }
+
+}
+
+/* ============================
+   MOBILE RESPONSIVE
+============================ */
+
+@media (max-width: 480px) {
+
+  .experience-card {
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  .experience-header h3 {
+    font-size: 19px;
+  }
+
+  .experience-header h4 {
+    font-size: 15px;
+  }
+
+  .experience-label {
+    font-size: 11px;
+  }
+
+  .experience-date {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .responsibility-title {
+    font-size: 16px;
+  }
+
+  .experience-list {
+    padding-left: 19px;
+  }
+
+  .experience-list li {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .experience-card .tech-stack {
+    gap: 8px;
+  }
+
+  .experience-card .tech-stack span {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-card,
+  .experience-card .tech-stack span {
+    transition: none;
+  }
+
+  .experience-card:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,120 @@
+.skills{
+    padding:60px 0px;
+}
+
+.skills-container{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+.skill-box{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 20px;
+    box-shadow: 0 15px 35px var(--shadow);
+}
+.skill-box h3{
+    font-size: 28px;
+    color: var(--heading);
+    margin-bottom: 10px;
+    padding-left: 15px;
+    border-left: 5px solid var(--primary);
+}
+.skill-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:10px;
+}
+
+.skill-card{
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:6px;
+    transition:.3s;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 120px;
+    /* width:150px; */
+}
+.skill-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--primary);
+}
+
+.icon{
+    font-size: 28px;
+     margin-bottom: 14px;    
+}
+
+.skill-card h4{
+    color:var(--heading);
+    font-size:16px;
+    margin: 4px 0px;
+}
+.level{
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.advanced{
+    background: #EDE9FE;
+    color: #bd68dc;
+}
+.intermediate{
+    background: #F3E8FF;
+    color: #9a50b4;
+}
+
+@media(max-width:480px){
+    .skill-card{
+        min-height: 140px;
+        padding: 15px;
+    }
+    .skill-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+}
+}
+@media(max-width:768px){
+    .section-title h2{
+        font-size: 28px;
+    }
+    .skill-box h3{
+        font-size: 20px;
+    }
+    .skill-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
+        gap: 12px;
+        /* padding: 5px; */
+    }
+    .skill-card{
+        padding: 15px;
+    }
+    .skill-card h4{
+        font-size: 14px;
+    }
+    .skill-box{
+        padding: 15px;
+    }
+    .icon{
+        font-size: 28px;
+    }
+    .level{
+        font-size: 11px;
+    }
+    .advanced {
+        background: none;
+    }
+    .intermediate{
+        background: none;
+    }
+}

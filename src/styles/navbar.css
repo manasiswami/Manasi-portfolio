@@ -1,0 +1,116 @@
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.591);
+
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 32px;
+}
+.logo span{
+    color: var(--primary);
+}
+.nav-links{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+   
+}
+.nav-links a{
+    text-decoration: none;
+     color: var(--primary);
+     font-weight: 600;
+     transition: 0.3s;
+     /* font-size: large; */
+}
+
+.nav-links a:hover{
+    color: var(--primary-hover);
+}
+
+.theme-btn{
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    /* background:var(--card); */
+    font-size:20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s;
+    background: var(--primary);
+    color: white; 
+}
+.theme-btn:hover{
+   background: var(--card);
+   color: var(--text);
+   border: 2px solid var(--primary-hover);
+}
+.menu-btn{
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--heading);
+}
+.menu-btn{
+    display: none;
+}
+
+@media(max-width:768px){
+    .navbar{
+        padding: 18px 20px;
+    }
+    .logo{
+        font-size:28px
+    }
+    .theme-btn{
+        width: 30px;
+        height: 30px;
+        color: var(--heading);
+        background: none;
+    }
+    .menu-btn{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--card);
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 25px 0;
+        transform: translateY(-120%);
+        transition: 0.35s;
+    }
+    .nav-links.active{
+        transform: translateY(0);
+    }
+    .btns{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    gap: 20px 
+}
+    .nav-links li{
+        width: 100%;
+    }
+}
