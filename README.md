@@ -5,7 +5,7 @@ A modern personal portfolio built to showcase my work, creative approach to deve
 Developed using **React.js, CSS, and Express.js**, this portfolio brings together my projects, technical interests, and development journey in one place.
 
 <p align="center">
-  <a href="(https://portfolio-b009a.web.app/)"><strong>🌐 Explore Live Portfolio</strong></a>
+  <a href="https://portfolio-b009a.web.app/"><strong>🌐 Explore Live Portfolio</strong></a>
   &nbsp; · &nbsp;
   <a href="https://github.com/manasiswami/Manasi-portfolio"><strong>💻 View Source Code</strong></a>
 </p>
